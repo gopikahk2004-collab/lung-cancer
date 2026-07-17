@@ -254,10 +254,10 @@ if st.session_state.page == "🔬 Diagnosis Lab":
         if selected_img is not None:
             st.divider()
             st.markdown("**Image Preview:**")
-            st.image(selected_img, use_container_width=True, caption=img_filename)
+            st.image(selected_img, width='stretch', caption=img_filename)
             
             # Predict Button
-            run_btn = st.button("Run CNN Pathology Analysis", type="primary", use_container_width=True)
+            run_btn = st.button("Run CNN Pathology Analysis", type="primary", width='stretch')
         else:
             st.info("Please select or upload a tissue slice image to trigger diagnosis.")
             run_btn = False
@@ -341,7 +341,7 @@ if st.session_state.page == "🔬 Diagnosis Lab":
                     )
                     fig.update_traces(texttemplate="%{text:.2%}", textposition="outside")
                     
-                    st.plotly_chart(fig, use_container_width=True)
+                    st.plotly_chart(fig, width='stretch')
                     
                     # Detail breakdown cards
                     st.markdown("### Tissue Metric Analysis")
@@ -485,10 +485,10 @@ elif st.session_state.page == "🖼️ Local Sample Gallery":
             try:
                 img = Image.open(img_path)
                 with col:
-                    st.image(img, use_container_width=True)
+                    st.image(img, width='stretch')
                     st.caption(f"**{file}**")
                     # Button to redirect to main page with this file selected
-                    if st.button("Analyze slide", key=f"btn_{class_key}_{file}", use_container_width=True):
+                    if st.button("Analyze slide", key=f"btn_{class_key}_{file}", width='stretch'):
                         st.session_state.selected_sample = {
                             "class": class_key,
                             "filename": file
