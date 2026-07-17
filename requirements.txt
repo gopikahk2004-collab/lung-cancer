@@ -1,0 +1,17 @@
+# Core web application framework
+streamlit>=1.30.0
+
+# Deep learning and neural network execution
+tensorflow>=2.15.0
+
+# Numerical operations and array manipulation
+numpy>=1.22.0
+
+# Data analysis and structured tables
+pandas>=2.0.0
+
+# Data visualization and interactive probability charts
+plotly>=5.15.0
+
+# Image processing library for handling slide cuts
+Pillow>=10.0.0
